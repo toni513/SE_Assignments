@@ -1,0 +1,23 @@
+body {
+  background-image: url("../images/ocean1.jfif");
+}
+
+}
+.grid3x3 {
+  display: grid;
+  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: 200px 200px 200px;
+
+}
+.cell {
+  width: 441px;
+  height: 201px;
+  background: mediumseagreen;
+  border-radius: 50%;
+  display: inline-grid;
+  cursor: crosshair;
+}
+
+.cell:hover {
+  opacity: 0;
+}
