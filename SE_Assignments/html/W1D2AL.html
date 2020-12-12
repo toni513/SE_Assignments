@@ -1,0 +1,68 @@
+<div class="nav1">
+</div>
+<br>
+<div class="nav2">
+</div>
+
+
+.nav1 {
+  width: 60px;
+  height: 60px;
+  background-color: coral;
+}
+.nav2 {
+  width: 60px;
+  height: 60px;
+  background-color: aqua;
+}
+.nav1:hover {
+  transition: width 2s;
+  animation-name: myframe;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.nav1:hover ~ .nav2 {
+  animation-delay: 2s;
+  transition: width 2s;
+  animation-name: myframe;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.nav1:not(:hover) {
+  transition: width 2s;
+  animation-name: resetting;
+  animation-duration: 2s;
+  animation-fill-mode: backwards;
+}
+
+.nav1:not(:hover) ~ .nav2 {
+  animation-delay: 2s;
+  transition: width 2s;
+  animation-name: resetting;
+  animation-duration: 2s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes myframe {
+  from {
+    left: 0px;
+    width: 50px;
+  }
+  to {
+    left: 200px;
+    width: 200px;
+  }
+}
+
+@keyframes resetting {
+  from {
+    left: 200px;
+    width: 200px;
+  }
+  to {
+    left: 0px;
+    width: 50px;
+  }
+}
