@@ -12,28 +12,23 @@ class Animal {
     this.superPower = superPower;
     this.lifeForce = lifeForce;
   }
-  userSuperPower(power) {
-    this.superPower = power;
+  userSuperPower() {
+    return `${this.name}: ${this.superPower} is my secret weapon.`;
   }
-  getLifeForce(force) {
-    this.lifeForce = force;
+  fly() {
+    return `${this.name} flies fast!`;
   }
-  showMyColor(mycolor) {
-    this.color = mycolor;
+  climb() {
+    return `${this.name} climbs high!`;
   }
 }
 
-const me = new Animal('ACE', 3, 'Black', 4, 'Immortality', 'titanium')
-console.log(me);
-me.userSuperPower('Super Strength');
-console.log(me);
-me.getLifeForce('Jelly')
-console.log(me);
-me.showMyColor('Orange');
-console.log(me);
-const you = new Animal('MAJOR', 4, 'Brown', 4, 'Invisibility', 'gold')
-console.log(you);
-
+let me = new Animal('ACE', 3, 'Black', 4, 'immortality', 'titanium')
+console.log(me.userSuperPower());
+let you = new Animal('MAJOR', 4, 'Brown', 4, 'invisibility', 'gold')
+console.log(you.fly());
+let him = new Animal('TANK', 4, 'Blue', 1, 'gullibility', 'pewter')
+console.log(him.climb());
 
 
 /*2.Create a class name User
@@ -48,19 +43,16 @@ class User {
    this.firstName = firstName;
    this.lastName = lastName;
    this.department = department;
+   this
 }
-   changeDepartment(downsizing) {
-     this.department = downsizing;
+   changeDepartment(x) {
+     return `${this.department} is the new department!`;
    }
 }
 
- const user1 = new User('Code','Man', 'IT')
+ let user1 = new User('Code','Man', 'IT')
  console.log(user1);
- const user2 = new User('Slim', 'Man', 'Food Service')
- console.log(user2);
- user2.changeDepartment('QC');
- console.log(user2);
- const user3 = new User('Old', 'Man', 'Retirement')
- console.log(user3);
- user3.changeDepartment('The Pasture');
- console.log(user3);
+ let user2 = new User('Slim', 'Man', 'Food Service')
+ console.log(user2.changeDepartment('QC'));
+ let user3 = new User('Old', 'Man', 'Retirement')
+ console.log(user3.changeDepartment('The Pasture'));
