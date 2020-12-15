@@ -46,13 +46,17 @@ class User {
    this
 }
    changeDepartment(x) {
-     return `${this.department} is the new department!`;
+     var newDepartment = (x);
+     return `${this.firstName}${this.lastName} is now in ` + newDepartment + '.';
    }
 }
 
  let user1 = new User('Code','Man', 'IT')
  console.log(user1);
  let user2 = new User('Slim', 'Man', 'Food Service')
- console.log(user2.changeDepartment('QC'));
+ console.log(user2);
  let user3 = new User('Old', 'Man', 'Retirement')
+ console.log(user3);
+
+ console.log(user2.changeDepartment('QC'));
  console.log(user3.changeDepartment('The Pasture'));
