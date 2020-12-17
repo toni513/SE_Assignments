@@ -19,7 +19,7 @@ vend(x){
 }
 let vendingMachine = new VendingMachine(
  ['Doritos','Funyuns','Grippos'], [1, 2, 3]);
-console.log(vendingMachine.vend(0));
+console.log(vendingMachine.vend(1));
 
 
 const snack1 = new VendingMachine('Doritos', '$1')
@@ -28,3 +28,29 @@ const snack2 = new VendingMachine('Funyuns', '$2')
 console.log(snack2);
 const snack3 = new VendingMachine('Grippos', '$3')
 console.log(snack3);
+
+
+
+//Correct Version
+
+class Snack {
+  constructor (name, price){
+    this.name= name;
+    this.price= price;
+  }
+}
+class VendingMachine {
+  constructor() {
+  this.snacks = [] //needs to be an array
+}
+vend (snackIndex) {
+  return this.snacks[snackIndex];
+}
+}
+let vendMachine = new VendingMachine()
+let snack1= new Snack('Snickers Bar',1);
+let snack2= new Snack('Doritos', .75);
+let snack3= new Snack('Pop Tart', .75);
+let snacks = [snack1,snack2,snack3]
+vendMachine.snacks.push(...snacks)
+console.log(vendMachine.vend(0))
