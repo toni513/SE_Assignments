@@ -197,8 +197,21 @@ Mergesort
 Bottom-up mergesort using run
 
 
- 3.  Suppose that you want to sort the books on your bookshelf, say into alphabetical order, by hand. What would be a good algorithm for doing this?
-
+3.  Suppose that you want to sort the books on your bookshelf, say into alphabetical order, by hand. What would be a good algorithm for doing this?
+QuickSort
 Does the answer change if you have very many (say thousands) of books? Does it depend on what order the books are currently in?
-
-4. can you use sorting to remove all duplicate elements from the list 4 1 6 3 8 4 2 9 4 5 1 7 3?
+No, quicksort can handle large size data sets.
+4. Can you use sorting to remove all duplicate elements from the list 4 1 6 3 8 4 2 9 4 5 1 7 3?
+const removeDuplicates = nums =>{
+  if (nums.length ===0) return 0
+  let i = 0
+  let j = 1
+  while (j < nums.length){
+    if (nums[j] !== nums[i]) {
+      i++
+      nums[i] = nums[j]
+      j++
+    }else j++
+  }
+  return i + 1
+};
