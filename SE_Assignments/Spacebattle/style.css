@@ -1,0 +1,199 @@
+/*Space Battle (background style)*/
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 15s ease infinite;
+}
+
+/*Space Battle (background image style)*/
+#BG {
+  width: 1328px;
+  height: 350px;
+  background-image: url('images/background4.jpg');
+  z-index: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+/*Style for top heading*/
+h1 {
+  font-family: 'Press Start 2P';
+  text-align: center;
+  color: grey;
+  font-size: 30px;
+}
+
+/*The Modal (background)*/
+.modal {
+  top: 0;
+  left: 0;
+  height: 350px;
+  width: 350px;
+  z-index: 1;
+  /*This puts our modal in front of the body (which has a default z-index setting of `0`*/
+  overflow: auto;
+  /*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
+  display: none;
+  /*Set this to `none` so that the modal does not show initially on page load.*/
+}
+
+/*Modal Content/Box*/
+#modal-textbox {
+  background-color: white;
+  border-color: grey;
+  border-radius: 50px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: 'Press Start 2P';
+  justify-content: center;
+  padding: 10px;
+}
+
+/*Open/Close Button*/
+.modal-buttons {
+  background-color: cyan;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  border: 6px solid silver;
+  border-radius: 20px;
+  font-family: 'Press Start 2P';
+  -webkit-animation: glow 4s ease-in-out infinite alternate;
+}
+
+/*Move button to right corner of modal*/
+#modal-footer {
+  text-align: right;
+}
+
+/*Space between 2nd heading & paragraphs*/
+h2 {
+  padding-bottom: 15px;
+}
+
+/*Style for 3rd heading & flexbox*/
+.page-wrapper {
+  margin: 10px;
+  font-family: 'Press Start 2P';
+  padding: 1em;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 5px;
+  text-align: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  margin: 5px;
+  align-items: : center;
+  border-radius: 20px;
+  border: 10px solid silver;
+  font-family: 'Press Start 2P';
+  justify-content: center;
+}
+
+.aqua-column {
+  background-color: aqua;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.magenta-column {
+  background-color: magenta;
+  height: 50px;
+}
+
+/*Style for reset button*/
+#resetbutton {
+  background-color: cyan;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  border: 6px solid silver;
+  border-radius: 20px;
+  font-family: 'Press Start 2P';
+  Right: 500px;
+}
+
+/*Animation & more style for reset button*/
+.reset {
+  text-decoration: none;
+  text-align: center;
+  color: rgb(88, 82, 82);
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  animation: glow 3s ease-in-out infinite alternate;
+  font-size: 15px;
+}
+
+/*Color & effects on hover*/
+.reset:hover,
+.reset:focus,
+.reset:active {
+  color: rgb(201, 31, 187);
+  background-color: purple;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.modal-buttons:hover,
+.modal-buttons:focus,
+.modal-buttons:active {
+  color: rgb(201, 31, 187);
+  background-color: purple;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+/*Hero ship saving Earth in the background image*/
+#hero {
+  width: 65px;
+  height: 65px;
+  background-image: url('s7.jpg');
+  position: absolute;
+  left: 350px;
+  top: 195px;
+  mix-blend-mode: multiply;
+}
+
+/*Enemy ship attacking Earth in the background image*/
+#enemy {
+  width: 50px;
+  height: 50px;
+  background-image: url('s6.png');
+  position: absolute;
+  left: 490px;
+  top: 105px;
+  mix-blend-mode: multiply;
+}
+
+/*Changes the backgrounds in various color shades*/
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*Brightens the buttons appearance*/
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(250, 243, 243), 0 0 20px rgb(219, 219, 219),
+      0 0 30px #b9b9b9, 0 0 40px #969595, 0 0 50px #4d4c4c, 0 0 60px #222223,
+      0 0 70px #000000;
+  }
