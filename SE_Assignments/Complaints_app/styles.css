@@ -1,0 +1,41 @@
+/* Add image to background of complaint form*/
+body {
+    background-image: url('images/NYC.jpg');
+}
+
+/*Style form*/
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100%;
+    margin-top: 25px;
+
+}
+
+/*Style input box*/
+input:first-child {
+    margin-bottom: 50px;
+    width: 200px;
+    font-size: 2em;
+    text-align: center;
+}
+
+/*Position input box*/
+#inputCenter {
+    text-align: center;
+}
+
+/*Style for complaints list*/
+li {
+    margin-top: 55px;
+    margin-bottom: 15px;
+    max-width: 300px;
+}
+
+/*Hide NYPD response until button clicked*/
+div {
+    display: none;
+}
+
